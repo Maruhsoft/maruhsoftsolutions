@@ -159,7 +159,10 @@ export default function ServiceOrderModal({ isOpen, onClose, service }: ServiceO
     
     try {
       if (data.paymentMethod === 'paystack') {
-        initializePayment(onPaystackSuccess, onPaystackClose);
+        initializePayment({
+          onSuccess: onPaystackSuccess,
+          onClose: onPaystackClose,
+        });
       } else {
         handleManualPayment(data);
         setIsSubmitting(false);
