@@ -3,19 +3,19 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, useAnimation } from 'framer-motion';
-import { ArrowRight, Code, Braces, Laptop, Database, Server, Globe, Star, Zap, Rocket } from 'lucide-react';
+import { ArrowRight, Code, Braces, Laptop, Database, Server, Globe, Star, Zap, Rocket, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const techIcons = [
-  { icon: Code, x: '10%', y: '20%', delay: 0, color: 'text-blue-500' },
-  { icon: Braces, x: '75%', y: '15%', delay: 0.5, color: 'text-green-500' },
-  { icon: Laptop, x: '25%', y: '80%', delay: 1, color: 'text-purple-500' },
-  { icon: Database, x: '85%', y: '70%', delay: 1.5, color: 'text-orange-500' },
-  { icon: Server, x: '50%', y: '30%', delay: 2, color: 'text-red-500' },
-  { icon: Globe, x: '15%', y: '60%', delay: 2.5, color: 'text-cyan-500' },
-  { icon: Star, x: '90%', y: '40%', delay: 3, color: 'text-yellow-500' },
-  { icon: Zap, x: '5%', y: '45%', delay: 3.5, color: 'text-pink-500' },
-  { icon: Rocket, x: '70%', y: '85%', delay: 4, color: 'text-indigo-500' },
+  { icon: Code, x: '10%', y: '20%', delay: 0, color: 'text-blue-500', size: 'h-8 w-8' },
+  { icon: Braces, x: '75%', y: '15%', delay: 0.5, color: 'text-green-500', size: 'h-7 w-7' },
+  { icon: Laptop, x: '25%', y: '80%', delay: 1, color: 'text-purple-500', size: 'h-9 w-9' },
+  { icon: Database, x: '85%', y: '70%', delay: 1.5, color: 'text-orange-500', size: 'h-8 w-8' },
+  { icon: Server, x: '50%', y: '30%', delay: 2, color: 'text-red-500', size: 'h-8 w-8' },
+  { icon: Globe, x: '15%', y: '60%', delay: 2.5, color: 'text-cyan-500', size: 'h-8 w-8' },
+  { icon: Star, x: '90%', y: '40%', delay: 3, color: 'text-yellow-500', size: 'h-7 w-7' },
+  { icon: Zap, x: '5%', y: '45%', delay: 3.5, color: 'text-pink-500', size: 'h-7 w-7' },
+  { icon: Rocket, x: '70%', y: '85%', delay: 4, color: 'text-indigo-500', size: 'h-8 w-8' },
 ];
 
 export default function HeroBanner() {
@@ -30,13 +30,14 @@ export default function HeroBanner() {
   if (!hasMounted) return null;
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
-      {/* Enhanced background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/10 to-accent/5 dark:from-primary/10 dark:via-secondary/5 dark:to-accent/10 z-0" />
+    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+      {/* Enhanced background with multiple layers */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/3 via-secondary/5 to-accent/3 dark:from-primary/5 dark:via-secondary/3 dark:to-accent/5" />
       
       {/* Animated mesh gradient overlay */}
-      <div className="absolute inset-0 opacity-30 dark:opacity-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 via-purple-500/20 to-pink-500/20 animate-pulse" />
+      <div className="absolute inset-0 opacity-30 dark:opacity-15">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/5 via-purple-500/5 to-pink-500/5 animate-pulse-slow" />
+        <div className="absolute inset-0 bg-gradient-to-l from-green-400/5 via-cyan-500/5 to-blue-500/5 animate-pulse-slow" style={{ animationDelay: '2s' }} />
       </div>
       
       {/* Enhanced floating tech icons */}
@@ -44,48 +45,49 @@ export default function HeroBanner() {
         {techIcons.map((item, i) => (
           <motion.div
             key={i}
-            className={`absolute ${item.color} dark:opacity-60`}
-            initial={{ x: item.x, y: item.y, opacity: 0, scale: 0.5, rotate: -180 }}
+            className={`absolute ${item.color} dark:opacity-60 opacity-50`}
+            initial={{ x: item.x, y: item.y, opacity: 0, scale: 0.3, rotate: -180 }}
             animate={{
-              opacity: [0, 0.8, 0.5],
-              scale: [0.5, 1.2, 1],
+              opacity: [0, 0.7, 0.5],
+              scale: [0.3, 1.1, 1],
               rotate: [0, 360, 0],
               y: [`${parseFloat(item.y) - 3}%`, `${parseFloat(item.y) + 3}%`, `${parseFloat(item.y) - 3}%`]
             }}
             transition={{
-              opacity: { delay: item.delay, duration: 2 },
-              scale: { delay: item.delay, duration: 2 },
-              rotate: { delay: item.delay, duration: 8, repeat: Infinity, ease: "linear" },
+              opacity: { delay: item.delay, duration: 2.5 },
+              scale: { delay: item.delay, duration: 2.5 },
+              rotate: { delay: item.delay, duration: 12, repeat: Infinity, ease: "linear" },
               y: { 
                 delay: item.delay, 
-                duration: 6, 
+                duration: 10, 
                 repeat: Infinity, 
                 repeatType: "reverse", 
                 ease: "easeInOut" 
               }
             }}
           >
-            <item.icon size={i % 3 === 0 ? 64 : i % 2 === 0 ? 56 : 48} />
+            <item.icon className={item.size} />
           </motion.div>
         ))}
       </div>
 
       {/* Content */}
-      <div className="container relative z-20 px-4 pt-16 pb-32 md:pt-24 md:pb-40">
-        <div className="max-w-5xl mx-auto text-center">
+      <div className="container relative z-20 container-padding section-padding">
+        <div className="max-w-6xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Zap className="h-4 w-4" />
-              Available for New Projects
+            <div className="inline-flex items-center gap-3 bg-card/80 backdrop-blur-sm border border-border/50 text-primary px-5 py-2.5 rounded-full text-sm font-medium mb-8 shadow-sm">
+              <Sparkles className="h-4 w-4" />
+              <span>Available for New Projects</span>
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              <span className="block">Transforming Ideas Into</span>
-              <span className="bg-gradient-to-r from-primary via-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1.1] text-balance">
+              <span className="block mb-2">Transforming Ideas Into</span>
+              <span className="bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
                 Digital Excellence
               </span>
             </h1>
@@ -96,7 +98,7 @@ export default function HeroBanner() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed text-balance">
               Professional software development and technology services
               tailored to your specific needs. From concept to deployment,
               I deliver exceptional results.
@@ -107,60 +109,65 @@ export default function HeroBanner() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
           >
-            <Button asChild size="lg" className="px-8 py-6 text-lg group">
+            <Button asChild size="lg" className="px-8 py-3 text-base h-auto group shadow-sm hover:shadow-md transition-all duration-300">
               <Link href="/services">
                 Explore My Services
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="px-8 py-6 text-lg">
+            <Button asChild variant="outline" size="lg" className="px-8 py-3 text-base h-auto bg-card/50 backdrop-blur-sm hover:bg-card/80 transition-all duration-300">
               <Link href="/#projects">
                 View My Work
               </Link>
             </Button>
           </motion.div>
 
-          {/* Stats section */}
+          {/* Enhanced stats section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto"
           >
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">50+</div>
-              <div className="text-sm text-muted-foreground">Projects Completed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">5+</div>
-              <div className="text-sm text-muted-foreground">Years Experience</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">100%</div>
-              <div className="text-sm text-muted-foreground">Client Satisfaction</div>
-            </div>
+            {[
+              { number: "50+", label: "Projects Completed", icon: Rocket },
+              { number: "5+", label: "Years Experience", icon: Star },
+              { number: "100%", label: "Client Satisfaction", icon: Sparkles }
+            ].map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}
+                className="bg-card/50 backdrop-blur-sm border border-border/50 p-5 rounded-xl hover:shadow-sm transition-all duration-300 group"
+              >
+                <stat.icon className="h-6 w-6 text-primary mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
+                <div className="text-2xl lg:text-3xl font-bold text-primary mb-1">{stat.number}</div>
+                <div className="text-sm text-muted-foreground font-medium">{stat.label}</div>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Enhanced scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
+        transition={{ delay: 1.2, duration: 1 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
       >
         <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-primary/50 rounded-full flex justify-center"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          className="w-5 h-9 border-2 border-primary/30 rounded-full flex justify-center bg-card/30 backdrop-blur-sm"
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-1 h-3 bg-primary rounded-full mt-2"
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            className="w-0.5 h-2 bg-primary rounded-full mt-2"
           />
         </motion.div>
       </motion.div>
