@@ -1,0 +1,50 @@
+[
+  {
+    "title": "FinTrack Dashboard",
+    "description": "A comprehensive financial tracking dashboard for small businesses with real-time analytics, expense tracking, and reporting features.",
+    "image": "https://images.pexels.com/photos/937980/pexels-photo-937980.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "tags": ["React.js", "Node.js", "MongoDB", "Chart.js", "AWS"],
+    "liveUrl": "https://fintrack-demo.example.com",
+    "repoUrl": "https://github.com/example/fintrack"
+  },
+  {
+    "title": "E-Commerce Platform",
+    "description": "A full-featured e-commerce platform with product management, cart functionality, payment processing, and order tracking.",
+    "image": "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "tags": ["Next.js", "Stripe", "PostgreSQL", "Tailwind CSS", "Vercel"],
+    "liveUrl": "https://ecommerce-demo.example.com",
+    "repoUrl": "https://github.com/example/ecommerce"
+  },
+  {
+    "title": "Real Estate Finder",
+    "description": "A property listing application with advanced filtering, map integration, and virtual tour features for real estate agents.",
+    "image": "https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "tags": ["Vue.js", "Firebase", "Google Maps API", "Vuetify"],
+    "liveUrl": "https://realestate-demo.example.com",
+    "repoUrl": "https://github.com/example/realestate"
+  },
+  {
+    "title": "Health Tracking App",
+    "description": "A mobile application for tracking health metrics, exercise routines, and nutrition information with personalized insights.",
+    "image": "https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "tags": ["React Native", "Redux", "Node.js", "MongoDB", "AWS"],
+    "liveUrl": "https://healthtrack-demo.example.com",
+    "repoUrl": "https://github.com/example/healthtrack"
+  },
+  {
+    "title": "Task Management System",
+    "description": "A collaborative task management platform for teams with real-time updates, deadline tracking, and performance analytics.",
+    "image": "https://images.pexels.com/photos/3243/pen-calendar-to-do-checklist.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "tags": ["Angular", "NestJS", "PostgreSQL", "Socket.io", "Docker"],
+    "liveUrl": "https://taskmanager-demo.example.com",
+    "repoUrl": "https://github.com/example/taskmanager"
+  },
+  {
+    "title": "Learning Management System",
+    "description": "An educational platform with course management, student progress tracking, and interactive learning materials.",
+    "image": "https://images.pexels.com/photos/301926/pexels-photo-301926.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "tags": ["React.js", "Express.js", "MongoDB", "AWS S3", "Material UI"],
+    "liveUrl": "https://lms-demo.example.com",
+    "repoUrl": "https://github.com/example/lms"
+  }
+]

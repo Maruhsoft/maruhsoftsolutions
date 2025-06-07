@@ -1,0 +1,122 @@
+[
+  {
+    "category": "Web Development",
+    "image": "https://images.pexels.com/photos/177598/pexels-photo-177598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "topics": [
+      {
+        "title": "Full Stack Web Application",
+        "subtopics": ["React/Next.js", "Node.js/Express", "Database Integration", "Authentication", "Deployment"],
+        "description": "Complete web application development from concept to deployment, with both frontend and backend implementation.",
+        "price": "₦250,000"
+      },
+      {
+        "title": "Frontend Development",
+        "subtopics": ["React.js", "Next.js", "Vue.js", "Responsive Design", "UI/UX Implementation"],
+        "description": "Modern, responsive frontend implementation with focus on performance and user experience.",
+        "price": "₦150,000"
+      },
+      {
+        "title": "Backend Development",
+        "subtopics": ["Node.js", "Express", "NestJS", "API Development", "Database Design"],
+        "description": "Robust backend system with API development, database integration, and security implementation.",
+        "price": "₦180,000"
+      },
+      {
+        "title": "E-commerce Website",
+        "subtopics": ["Product Catalog", "Shopping Cart", "Payment Integration", "Order Management"],
+        "description": "Complete e-commerce solution with product management, cart functionality, and payment processing.",
+        "price": "₦300,000"
+      }
+    ]
+  },
+  {
+    "category": "Mobile Development",
+    "image": "https://images.pexels.com/photos/5082579/pexels-photo-5082579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "topics": [
+      {
+        "title": "Cross-Platform Mobile App",
+        "subtopics": ["React Native", "Expo", "State Management", "API Integration", "App Store Submission"],
+        "description": "Complete mobile application development for both iOS and Android platforms using React Native.",
+        "price": "₦220,000"
+      },
+      {
+        "title": "Flutter Application",
+        "subtopics": ["Flutter UI", "State Management", "Firebase Integration", "Performance Optimization"],
+        "description": "High-performance mobile app development using Flutter for beautiful UI and smooth animations.",
+        "price": "₦200,000"
+      },
+      {
+        "title": "Native iOS Development",
+        "subtopics": ["Swift", "UIKit/SwiftUI", "CoreData", "API Integration"],
+        "description": "Native iOS application development with focus on Apple design guidelines and device optimization.",
+        "price": "₦250,000"
+      },
+      {
+        "title": "Native Android Development",
+        "subtopics": ["Kotlin", "Jetpack Compose", "Room Database", "Material Design"],
+        "description": "Native Android application development with focus on Google's material design and Android-specific features.",
+        "price": "₦240,000"
+      }
+    ]
+  },
+  {
+    "category": "Consulting & Training",
+    "image": "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "topics": [
+      {
+        "title": "Technical Consultation",
+        "subtopics": ["Architecture Review", "Technology Selection", "Performance Optimization", "Security Audit"],
+        "description": "Expert technical consultation to solve complex problems and optimize existing systems.",
+        "price": "₦20,000/hour"
+      },
+      {
+        "title": "Team Training Workshop",
+        "subtopics": ["React.js", "Node.js", "Testing", "DevOps", "Best Practices"],
+        "description": "Hands-on workshop training for development teams to improve skills and productivity.",
+        "price": "₦150,000/day"
+      },
+      {
+        "title": "Code Review & Optimization",
+        "subtopics": ["Performance Audit", "Best Practices", "Security Review", "Documentation"],
+        "description": "Comprehensive code review with actionable recommendations for improvements.",
+        "price": "₦100,000"
+      },
+      {
+        "title": "Technical Mentorship",
+        "subtopics": ["1-on-1 Guidance", "Project Assistance", "Career Development", "Skill Enhancement"],
+        "description": "Personalized mentorship program for developers looking to enhance their skills and career.",
+        "price": "₦80,000/month"
+      }
+    ]
+  },
+  {
+    "category": "UI/UX Design",
+    "image": "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "topics": [
+      {
+        "title": "Website Design",
+        "subtopics": ["Wireframing", "UI Design", "Responsive Design", "Prototype"],
+        "description": "Professional website design with focus on user experience, brand consistency, and conversion optimization.",
+        "price": "₦120,000"
+      },
+      {
+        "title": "Mobile App Design",
+        "subtopics": ["User Flows", "UI Design", "Interactive Prototype", "Design System"],
+        "description": "Comprehensive mobile app design with intuitive user flows and engaging interfaces.",
+        "price": "₦150,000"
+      },
+      {
+        "title": "UX Audit & Redesign",
+        "subtopics": ["Usability Testing", "User Research", "Information Architecture", "Redesign Proposal"],
+        "description": "In-depth analysis of existing user experience with actionable redesign recommendations.",
+        "price": "₦100,000"
+      },
+      {
+        "title": "Design System Creation",
+        "subtopics": ["Component Library", "Style Guide", "Documentation", "Implementation Support"],
+        "description": "Comprehensive design system to ensure consistency across all digital products.",
+        "price": "₦180,000"
+      }
+    ]
+  }
+]
